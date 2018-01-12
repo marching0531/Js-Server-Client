@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        
+        /*
+        ex 1)
+        window.onload = function () {
+            var list = '';
+
+            list += '<ul>';
+            list += '   <li>Hello</li>';
+            list += '   <li>JavaScript..!</li>';
+            list += '</ul>';
+
+            document.body.innerHTML = lis;
+            }
+        */
+
+        /*
+        ex 2)
+        for (let i = 0; i < 3; i++) {
+            setTimeout(() => {
+                alert(i+1);
+            }, 1000 * i);
+        }
+        */
+
+        /*
+        ex 3)
+        var date = new Date();
+        var hour = date.getHours();
+
+
+        if (hour < 12) {
+            alert('오전입니다');
+        }
+
+        if (hour >= 12) {
+            alert('오후입니다');
+        }
+        */
+
+        /*
+        ex 4)
+        var input = prompt('숫자를 입력해 주세요', '');
+        var number = Number(input);
+
+        number > 0 ? alert('자연수입니다') : alert('자연수가 아닙니다');
+        */
+
+        /*
+        ex 5)
+        for(const element of [1,2,3,4]){
+            alert(`요소는 ${element}입니다`);
+        }
+        */    
+        
+        function sumAll() {
+            alert(typeof (arguments) + ` : ` + arguments.length + ' : ' + arguments[3]);
+        }
+
+        sumAll(1, 2, 3, 4, 5, 6, 7);
+    </script>
+
+    <!--
+     Exercise 1) Moving Alphabet
+    
+        <script>
+
+        function nextRandomInterger(limit) {
+
+            return Math.round(Math.random() * limit);
+        }
+
+        var alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+        function randomAlphabet() {
+
+            return alphabet.charAt(nextRandomInterger(25));
+        }
+
+        function randomSpeed(maxSpeed) {
+
+            return Math.random() * maxSpeed - Math.random() * maxSpeed;
+        }
+    </script>
+
+    <script>
+
+        var canvasWidth = 700;
+        var canvasHeight = 900;
+
+        function MovingText() {
+
+            this.x = nextRandomInterger(canvasWidth);
+            this.y = nextRandomInterger(canvasHeight);
+            this.vx = randomSpeed(10);
+            this.vy = randomSpeed(10);
+
+            this.body = document.createElement('h1');
+            this.body.innerHTML = randomAlphabet();
+            this.body.style.position = 'absolute';
+
+            document.body.appendChild(this.body);
+        }
+
+        MovingText.prototype.move = function () {
+            if (this.x < 0 || this.x > canvasWidth) { this.vx *= -1; }
+            if (this.y < 0 || this.y > canvasHeight) { this.vy *= -1; }
+
+            this.x += this.vx;
+            this.y += this.vy;
+
+            this.body.style.left = this.x + 'px';
+            this.body.style.top = this.y + 'px';
+        };
+    </script>
+
+    <script>
+        window.onload = function () {
+
+            var movingTexts = [];
+
+            for (var i = 0; i < 100; i++) {
+
+                movingTexts.push(new MovingText());
+            }
+
+            setInterval(function () {
+                for (var i in movingTexts) {
+                    movingTexts[i].move();
+                }
+            }, 1000 / 30);
+        };
+        
+    </script>
+-->
+</head>
+<body>
+
+</body>
+</html>
