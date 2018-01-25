@@ -1,1 +1,7 @@
-exercise.html
+#exercise files here
+exercise*
+
+#img files here
+*.png
+*.JPG
+*.jpg
