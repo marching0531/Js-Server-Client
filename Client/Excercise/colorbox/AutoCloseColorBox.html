@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <script src="jquery-3.3.1.js"></script>
+    <script src="jquery.colorbox.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('a').colorbox({
+                inline: true
+            }).click(function () {
+                setTimeout(function () {
+                    $.colorbox.close();
+                }, 3000);
+            }).trigger('click');
+        });
+    </script>
+</head>
+<body>
+    <h3>jQuery colorbox</h3>
+    <a id="colorboy" href="#dialog">Dialog with Colorbox</a>
+
+    <div id="dialogs" style="display:none;">
+        <div id="dialog">
+            <h3>Auto Colorbox</h3>
+            <p>closed in 3 seconds</p>
+        </div>
+    </div>
+</body>
+</html>

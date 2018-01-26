@@ -1,0 +1,44 @@
+﻿<!DOCTYP
+E html>
+<html>
+<head>
+    <title>Colorbox</title>
+    <link rel="stylesheet" href="colorbox.css"/>
+
+    <script src="jquery-3.3.1.js"></script>
+    <script src="jquery.colorbox.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+
+            $('a').colorbox({
+
+                //lightbox 생성방식
+                transition: 'fade',
+                //배경 투명도
+                opacity: 0.0,
+                onOpen: function () {
+                    alert('Executed');
+                },
+                onClose: function () {
+                    alert('Closed');
+                }
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <h1>jQuery LightBox</h1>
+    <a rel="lightbox" title="Chrysanthemum" href="Chrysanthemum.jpg">Image-1</a>
+    <a rel="lightbox" title="Desert" href="Desert.jpg">Image-2</a>
+    <a rel="lightbox" title="Hydrangeas" href="Hydrangeas.jpg">Image-3</a>
+    <a rel="lightbox" title="Jellyfisy" href="Jellyfish.jpg">Image-4</a>
+    <a rel="lightbox" title="Koala" href="Koala.jpg">Image-5</a>
+    <a rel="lightbox" title="Lighthouse" href="Lighthouse.jpg">Image-6</a>
+    <a rel="lightbox" title="Penguins" href="Penguins.jpg">Image-7</a>
+    <a rel="lightbox" title="Tulips" href="Tulips.jpg">Image-8</a>
+</body>
+</html>
