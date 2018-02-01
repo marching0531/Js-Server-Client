@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>XMLHttpRequest</title>
+    <script src="jquery-3.3.1.js"></script>
+</head>
+
+<body>
+    <script>
+        $(document).ready(function () {
+            $.ajax('/data.html', {
+                success: function (data) {
+                    $('body').append(data);
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
